@@ -35,6 +35,9 @@ namespace ET
                 LSUnitFactory.Init(lsWorld, unitInfo);
                 self.PlayerIds.Add(unitInfo.PlayerId);
             }
+            
+            LSMineComponent mineComponent = lsWorld.AddComponent<LSMineComponent>();
+            mineComponent.Init();
         }
 
         public static void Update(this Room self, OneFrameInputs oneFrameInputs)

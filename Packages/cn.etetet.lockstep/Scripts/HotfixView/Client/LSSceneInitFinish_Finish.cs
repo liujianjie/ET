@@ -9,6 +9,8 @@ namespace ET.Client
             
             await room.AddComponent<LSUnitViewComponent>().InitAsync();
             
+            room.AddComponent<LSMineViewComponent>().Init();
+            
             room.AddComponent<LSCameraComponent>();
 
             if (!room.IsReplay)
